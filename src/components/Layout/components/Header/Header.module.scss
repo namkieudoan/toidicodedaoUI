@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 
@@ -52,12 +53,51 @@
     }
 
 }
-.logo {
-    color: #fff;
+
+
+.search-container {
+    display: none;
+    width: calc(100% - 220px);
+    top: var(--default-layout-header-height);
+    right:0px;
+    height: 46px;
+    background-color: var(--primary-color);
+    position: absolute;
+    
+    input {
+        width: 48%;
+        height: 30px;
+        float: right;
+        line-height: 46px;
+        margin-right: 6px;
+        margin-top: 8px;
+        font-size: 1.6rem;
+        border: 2px solid #ccc;
+        padding: 2px;
+    }
+    input &:focus {
+        outline: none;
+    }
+    
 }
 
+.active-search {
+    display: block;
+}
 
 // < laptop
-@media screen and (max-width: 860px){
+@media screen and (max-width: 810px){
+    .title,.navigation {
+        display: none;
+    }
 
+}
+@media screen and (max-width: 1009px){
+    .search-container {
+        width: 100%;
+        padding: 0 22px;
+    }
+    .search-container > input {
+        width: 100%;
+    }
 }
