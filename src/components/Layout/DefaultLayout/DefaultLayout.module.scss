@@ -1,0 +1,73 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--default-layout-background-color);
+}
+
+.container {
+    max-width: var(--default-layout-width);
+    display: flex;
+
+    .secondary {
+        width: 222px;
+        padding: 0 30px;
+        background-color: var(--default-layout-background-color);
+        color: #fff;
+    }
+    
+
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    min-height: 1000px;
+    padding-top: 72px;
+    background-color:#fff;
+    
+    .content-children {}
+
+    .sidebar{
+        padding: 0 30px 24px;
+        min-height: 400px;
+    }
+}
+
+//responsive
+  
+// width < tablet 
+@media only screen and (max-width: 739px){
+    .content {
+        padding-top: 48px;
+        flex-direction: column;
+    }
+    .content-children {
+        width: 100%;
+        flex: 1;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
+
+// width < pc 
+@media only screen and (max-width: 1008px){
+    .container {
+        flex-direction: column-reverse;
+    }
+    .content {
+        padding-top: 28px;
+    }
+}
+
+//  width >= tablet 
+@media only screen and (min-width: 740px){
+
+    .content-children {
+        width: 66%;
+    }
+    .sidebar {
+        width: 34%;
+    }
+}
+

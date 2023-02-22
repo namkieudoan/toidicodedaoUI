@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100%;
+    height: var(--default-layout-header-height);
+    display: flex;
+    justify-content: left;
+    color: #fff;
+}
+
+.inner {
+    width: var(--default-layout-width);
+    background-color: #000;
+    padding-left: 30px;
+}

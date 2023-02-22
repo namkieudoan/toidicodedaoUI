@@ -1,0 +1,13 @@
+.wrapper {
+    background-color: #fff;
+    color: #fff;
+    min-height: 1000px;
+    max-width: var(--default-layout-width);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+}
