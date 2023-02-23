@@ -1,4 +1,4 @@
-export const SearchIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const SearchIcon = ({ width = '1.8rem', height = '1.8rem', className }) => (
     <svg
         className={className}
         width={width}
@@ -23,7 +23,7 @@ export const LogoIcon = ({ width = '2.4rem', height = '2.4rem', className }) => 
     </svg>
 );
 
-export const MenuIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const MenuIcon = ({ width = '1.8rem', height = '1.8rem', className }) => (
 
     <svg 
         className={className} 

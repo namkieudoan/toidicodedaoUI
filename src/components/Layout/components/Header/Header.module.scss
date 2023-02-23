@@ -29,7 +29,7 @@
     cursor: pointer;
     margin-left: 2px;
     float: right;
-    padding: 9px 12px;
+    padding: 12px 15px;
     background-color: var(--primary-color);
 }
 
@@ -41,6 +41,13 @@
 .nav-item {
     line-height: 48px;
     list-style: none;
+    position: relative; //set dropdown
+
+    &:hover {
+        .dropdown-menu {
+            display: block;
+        }
+    }
 }
 .nav-link {
     font-size: 1.2rem;
@@ -54,7 +61,37 @@
     }
 }
 
+//popper navbar stage 2
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    top: var(--default-layout-header-height);
+    left: 0;
+    min-width: 200px;
+    min-height: 60px;
+    background-color: #000;
+    color: #fff;
+    list-style: none;
+    z-index: 1;
+}
+.dropdown-item {
 
+}
+
+.dropdown-link {
+    display: block;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+
+    &:hover {
+        background-color: rgb(117, 185, 100);
+        cursor: pointer;
+    }
+}
+
+
+//search
 .search-container {
     display: none;
     width: calc(100% - 220px);
@@ -88,14 +125,31 @@
 //menubar
 .menubar {
     display: none;
-    padding: 9px 12px;
+    padding: 12px 15px;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: #5c5959;
+    }
 }
 
 // < laptop
-@media screen and (max-width: 790px){
+@media screen and (max-width: 798px){
     .navigation {
         display: none;
     }
+
+    .search-container {
+        width: 100%;
+        padding: 0 22px;
+
+        input {
+            width: 100%;
+            float: none;
+        }
+    }
+
     .menubar {
         display: inline-block;
     }
@@ -105,10 +159,5 @@
     .search-container {
         width: 100%;
         padding: 0 22px;
-
-        input {
-            width: 100%;
-            float: none;
-        }
     }
 }
