@@ -33,8 +33,9 @@
     background-color: var(--primary-color);
 }
 
-//navigation
+//navigation 
 
+//on destop
 .nav-list {
     display: flex;
 }
@@ -74,9 +75,6 @@
     list-style: none;
     z-index: 1;
 }
-.dropdown-item {
-
-}
 
 .dropdown-link {
     display: block;
@@ -90,6 +88,7 @@
     }
 }
 
+//Nav on Tablet & Mobile
 
 //search
 .search-container {
@@ -134,10 +133,36 @@
     }
 }
 
+
 // < laptop
 @media screen and (max-width: 798px){
+    
     .navigation {
+        position: absolute;
         display: none;
+        top: 48px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background: #000;
+    }
+    .active-menu {
+        display: flex;
+    }
+
+    .nav-list {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0px 10px 0px;
+        display: block
+    }
+
+    .dropdown-menu {
+        position:unset;
+        background-color: #000;
     }
 
     .search-container {
@@ -160,4 +185,5 @@
         width: 100%;
         padding: 0 22px;
     }
+
 }

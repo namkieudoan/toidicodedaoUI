@@ -24,7 +24,7 @@ function Header() {
             <div className={cx("title")}> <Link to=""> Yêu Ngon 🐶! </Link> </div>
             
             {/* navbar */}
-            <div className={cx("navigation")}>
+            <div className={cx("navigation" , `${isActiveMenu ? 'active-menu': null}`)}>
                 <ul className={cx("nav-list")}>
                     <li className={cx("nav-item")}><Link className={cx("nav-link")} to="">HOME</Link> </li>
 
@@ -71,7 +71,7 @@ function Header() {
 
             {/* Menu bar */}
             <div className={cx("menubar")} onClick={handleClickMenu}>
-                <div className={cx("container-menu", `${isActiveMenu ? 'active-menu': null}`)}>
+                <div className={cx("container-menu")}>
                     <MenuIcon/>
                 </div>
             </div>
