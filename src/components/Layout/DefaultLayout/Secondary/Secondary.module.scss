@@ -1,4 +1,98 @@
 .wrapper {
     min-width: 160px;
     min-height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    .desc {
+        font-size: 1.2rem;
+        opacity: 0.8;
+        padding: 12px 0;
+    }
+
+    button {
+        height: 35px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: dimgray;
+        border-radius: 8px;
+        margin-bottom: 44px;
+        cursor: pointer;
+    }
+
+    .social {
+        font-size: 1.4rem;
+
+        span {
+            font-size: 1.1rem;
+            padding-bottom: 15px;
+            display: inline-block;
+            font-weight: 600;
+        }
+    }
+    .social-list {
+        padding-bottom: 40px;
+
+        li{
+            font-size: 1.2rem;
+            padding-bottom: 6px;
+            list-style: none;
+        }
+    }
+    .user-online {
+        font-size: 1.2rem;
+        margin-bottom: 46px;
+        
+        span {
+            display: block;
+        }
+        .box-user{
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-top: 12px;
+            background-color: #ddd;
+            color: #000;
+        }
+    }
+    .blog-stats {
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-bottom: 14px;
+    }
+    .stats-count{
+        font-size: 1.2rem;
+        opacity: 0.8;
+        margin-bottom: 12px;
+    }
+
+    .link {
+        margin: 12px 0 24px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .storage {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 6px;
+
+        span {
+            display: block;
+            padding-top: 8px;
+            font-size: 1.1rem;
+        }
+    }
+
+     a {
+       color: #fff;
+        
+       &:hover{
+        color: var(--primary-color);
+       }
+    
+    }
 }
+
+
+

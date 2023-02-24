@@ -6,9 +6,9 @@ const cx = classNames.bind(styles);
 
 function Footer() {
 
-    return <Footer className={cx('wrapper')}>
+    return <div className={cx('wrapper')}>
         <div className={cx("container")}><span>Website By YeuNgon</span></div>
-    </Footer>;
+    </div>;
 }
 
 export default Footer;
