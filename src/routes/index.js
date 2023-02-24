@@ -1,5 +1,5 @@
 // layout
-import HeaderOnly from "../components/Layout/HeaderOnly";
+// import HeaderOnly from "../components/Layout/HeaderOnly";
 
 //pages
 import Coding from "../pages/Coding";
@@ -14,7 +14,7 @@ const publicRoutes = [
     { path: "/blog", component: Blog },
     { path: "/something", component: Something },
     { path: "/coding", component: Coding },
-    { path: "/profile", component: Profile, layout: HeaderOnly },
+    { path: "/profile", component: Profile },
     
 ];
 

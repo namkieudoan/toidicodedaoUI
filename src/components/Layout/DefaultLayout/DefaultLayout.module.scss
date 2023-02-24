@@ -49,6 +49,20 @@
 @media only screen and (max-width: 1008px){
     .container {
         flex-direction: column-reverse;
+
+        .secondary{
+            width: 100%;
+
+            ul {
+                width: 100%;
+            }
+            a {
+                display: block;
+                width: 100%;
+                padding-bottom: 12px;
+                border-bottom:1px solid #ccc ;
+            }
+        }
     }
     .content {
         padding-top: 48px;
@@ -70,6 +84,7 @@
     .sidebar {
         width: 100%;
     }
+
 }
 
 

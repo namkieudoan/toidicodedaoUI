@@ -29,10 +29,8 @@ function Secondary() {
 
         <div className={cx("link")}>
             <h5>LIÊN KẾT</h5> 
-            <br/>
             <p> <Link to="" >Codeholiguy </Link></p>
             <p> <Link to="" >Fullstack.edu.vn </Link></p>
-            <br/>
             <p> <Link to="" >The Full Snack Developer </Link></p>
             <p> <Link to="" >Tiger Nguyễn - BrSE blog </Link></p>
         </div>

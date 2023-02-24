@@ -19,9 +19,9 @@ function Blog(
                 <div className={cx("container")}>
                     <div className={cx("post-header")}>
                         <span className={cx("entry-category")}>CHUYỆN CODING, CHUYỆN NGHỀ NGHIỆP</span>
-                        <h2 className={cx("entry-title")}>REVIEW NHẸ CÁC NGÔN NGỮ, CÔNG NGHỆ, FRAMEWORK MÀ MÌNH ĐÃ VÀ ĐANG DÙNG KIẾM CƠM - PHẦN CUỐI</h2>
+                        <h2 className={cx("entry-title")}><Link to={""}>REVIEW NHẸ CÁC NGÔN NGỮ, CÔNG NGHỆ, FRAMEWORK MÀ MÌNH ĐÃ VÀ ĐANG DÙNG KIẾM CƠM - PHẦN CUỐI </Link></h2>
                         <span className={cx("entry-meta")}>
-                            <span> 24/4/2023</span>
+                            <span> 24/4/2023 -</span>
                             <span> 62 comment </span>
                         </span>
                     </div>
