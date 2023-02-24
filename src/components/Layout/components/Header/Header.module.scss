@@ -24,6 +24,15 @@
     font-family: Georgia, 'Times New Roman';
     flex: 1;
     line-height: 48px;
+
+    a {
+        color: #fff;
+        padding: 8px 12px;
+
+        &:hover {
+            border: 1px solid #ccc;
+        }
+    }
 }
 .search {
     cursor: pointer;
@@ -51,13 +60,18 @@
     }
 }
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    padding: 17px 22px 15px 12px;
+    padding: 17px 16px 16px 12px;
+    color: #fff;
+    
+    span {
+        padding-left: 4px;
+    }
     &:hover {
         background-color: var(--primary-color);
     }
-    &:active.inner {
+    &:active {
         color: var(--primary-color);
     }
 }
@@ -79,8 +93,9 @@
 .dropdown-link {
     display: block;
     padding: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: var(--primary-color);
+    color: #fff;
 
     &:hover {
         background-color: rgb(117, 185, 100);
@@ -93,7 +108,7 @@
 //search
 .search-container {
     display: none;
-    width: calc(100% - 220px);
+    width: calc(100% - var(--default-layout-secondary-width));
     top: var(--default-layout-header-height);
     right:0px;
     height: 46px;
@@ -180,7 +195,7 @@
     }
 
 }
-@media screen and (max-width: 1009px){
+@media screen and (max-width: 1008px){
     .search-container {
         width: 100%;
         padding: 0 22px;

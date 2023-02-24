@@ -1,6 +1,16 @@
+import classNames from "classnames/bind";
+import {Link} from "react-router-dom";
+
+import styles from "./Home.module.scss";
+
+const cx = classNames.bind(styles);
+
+
 function Home() {
     return(
-        <h1>Home Page</h1>
+        <div className={cx("wrapper")} >
+            <div><Link>Xin Chào các bạn</Link></div>
+        </div>
     );
 }
 

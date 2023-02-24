@@ -1,6 +1,6 @@
 .wrapper {
     background-color: #fff;
-    color: #fff;
+    color: #000000;
     min-height: 1000px;
     max-width: var(--default-layout-width);
 }
@@ -9,5 +9,7 @@
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    background-color: #000;
+    background-color: #ffffff;
+    border-left: 2px solid #24890D;
+    border-right: 2px solid #24890D;
 }
