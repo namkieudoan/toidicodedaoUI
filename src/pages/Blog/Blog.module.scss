@@ -61,3 +61,22 @@
         color: #24890d;
     }
 }
+
+//loading
+.loading{
+    display: block;
+    width: 4.6rem;
+    height: 4.6rem;
+    margin: auto;
+    
+    animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner{
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
