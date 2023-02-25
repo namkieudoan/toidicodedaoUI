@@ -1,5 +1,5 @@
 // layout
-// import HeaderOnly from "../components/Layout/HeaderOnly";
+import Admin from "../components/Layout/Admin/AdminLayout";
 
 //pages
 import Coding from "../pages/Coding";
@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import Post from "../components/Post";
 import Something from "../pages/Something";
 import Blog from "../pages/Blog";
+import HomeAdmin from "../components/Layout/Admin/pages/HomeAdmin";
 
 //public routes
 const publicRoutes = [
@@ -19,6 +20,8 @@ const publicRoutes = [
 ];
 
 //private router
-const priveRoutes = [ ];
+const priveRoutes = [
+    { path: "/admin", component: HomeAdmin },
+];
 
 export { publicRoutes, priveRoutes };

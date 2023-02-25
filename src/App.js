@@ -1,8 +1,9 @@
 import { Fragment } from "react";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import AdminLayout from "./components/Layout/Admin/AdminLayout";
 import DefaulLayout from "./components/Layout/DefaultLayout";
-import { publicRoutes } from "./routes";
+import { publicRoutes,priveRoutes } from "./routes";
  
 
 function App() {
@@ -26,7 +27,19 @@ function App() {
               const Page = route.component;
               return <Route key={index} path={route.path} element={ <Layout> <Page /> </Layout> }/>
            })}
+
+           {priveRoutes.map((route,index)=>{
+
+              // tải layout 
+              let Layout = AdminLayout;
+
+              const Page = route.component;
+              return <Route key={index} path={route.path} element={ <Layout> <Page /> </Layout> }/>
+           })}
+
+            
         </Routes>
+
       </div>
     </Router>
   );
