@@ -1,17 +1,20 @@
 import classNames from "classnames/bind";
-import {Link} from "react-router-dom";
-import { useEffect, useState } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 
 import styles from "./Blog.module.scss";
+import { PostContext } from "../../contexts/PostContext";
 import { LoadingIcon } from "../../components/icons";
 
 const cx = classNames.bind(styles);
 
 function Blog() {
+    const {getId} = useContext(PostContext);
     const [postList, setPostList] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    
+    //Get List Post
     useEffect(()=> {
         setLoading(true); 
     async function getAllPost(){
@@ -29,6 +32,12 @@ function Blog() {
             });
     },[]);
 
+    //handle to post detail
+    const handlePost = (id) =>{
+        getId(id); 
+        window.scrollTo(0,0)
+    }
+
     return(
         <div className={cx("wrapper")} >
 
@@ -36,14 +45,14 @@ function Blog() {
 
             {postList.map((post,id)=>{ 
             return( 
-                <article className={cx("post")} key={id}>
+                <article className={cx("post")} key={id} >
                     <Link  className={cx("post-image")} to={post._id} >
                         <img src={post.images[0]}  alt="img-post"/>
                     </Link>
                     <div className={cx("container")}>
                         <div className={cx("post-header")}>
                             <span className={cx("entry-category")}>{post.category}</span>
-                            <h2 className={cx("entry-title")}><Link to={post._id}>{post.title} </Link></h2>
+                            <h2 className={cx("entry-title")}><Link to={post._id} onClick={()=> handlePost(post._id)}>{post.title}</Link></h2>
                             <span className={cx("entry-meta")}>
                                 <span> {post.publishedDate}</span>
                                 <span> 62 comment </span>
