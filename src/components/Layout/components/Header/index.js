@@ -42,7 +42,6 @@ function Header() {
                         </Link> 
                     </li>
                     
-                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/something">CHUYỆN LINH TINH</Link> </li>
                     <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/post">BÀI VIẾT HAY</Link> </li>
                     <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/profile">ABOUT ME</Link> </li>
                 </ul>

@@ -1,0 +1,16 @@
+.wrapper {
+    max-width: 780px;
+    display: block;
+    margin: auto;
+    padding: 0 46px 46px;
+}
+.start {
+    a {
+        font-weight: 600;
+        font-size: 2rem;
+        &:hover {
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+    }
+}

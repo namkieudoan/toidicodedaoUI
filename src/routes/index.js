@@ -4,7 +4,6 @@
 import Coding from "../pages/Coding";
 import Home from "../pages/Home";
 import Post from "../components/Post";
-import Something from "../pages/Something";
 import Blog from "../pages/Blog";
 import HomeAdmin from "../components/Layout/Admin/pages/HomeAdmin";
 import Notfoud from "../pages/Notfound";
@@ -13,7 +12,6 @@ import Notfoud from "../pages/Notfound";
 const publicRoutes = [
     { path: "/blog/:id", component: Post },
     { path: "/blog", component: Blog },
-    { path: "/something", component: Something },
     { path: "/coding", component: Coding },
     { path: "/", component: Home },
     { path: "/:id", component: Notfoud },
