@@ -47,7 +47,7 @@ function Blog() {
             return( 
                 <article className={cx("post")} key={id} >
                     <Link  className={cx("post-image")} to={post._id} >
-                        <img src={post.images[0]}  alt="img-post"/>
+                        <img src={post.images[0]}  alt="img-post" onClick={()=> handlePost(post._id)}/>
                     </Link>
                     <div className={cx("container")}>
                         <div className={cx("post-header")}>
@@ -63,7 +63,7 @@ function Blog() {
                                 
                         </div>
                         <div className={cx("post-direct")}>
-                            <Link  className={cx("post-direct-link")} to={post._id}>- Continute Reading -</Link>
+                            <Link  className={cx("post-direct-link")} to={post._id} onClick={()=> handlePost(post._id)}>- Continute Reading -</Link>
                             <span>{post.tags}</span>
                         </div>
                     </div>
