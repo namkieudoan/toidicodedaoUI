@@ -60,43 +60,44 @@ function HomeAdmin() {
 
     return(
         <div>
-            <h1>Add Post</h1>
-            <form onSubmit={handleSubmit}>
-                <lable>
-                    Title
-                    <input type={"text"} name={"name"} onChange = {e => setTitle(e.target.value)} />
-                </lable>
-
-                <lable>
-                    Content
-                    <input type={"text"} name={"content"} onChange = {e => setContent(e.target.value)}/>
-                </lable>
-                <lable>
-                    Images
-                    <input type={"text"} name={"images"} onChange = {e => setImages(e.target.value)}/>
-                </lable>
-
-                <button type={"submit"}>Add</button>
-            </form>
-
-            <h1>Update Post</h1>
-            <form onSubmit={handleUpdateBtn} >
-                <lable>
-                    Title
-                    <input type={"text"} name={"name"} onChange = {e => setTitle(e.target.value)} defaultValue ={post.title} />
-                </lable>
-
-                <lable>
-                    Content
-                    <input type={"text"} name={"content"} onChange = {e => setContent(e.target.defaultValue)} defaultValue={post.content}/>
-                </lable>
-                <lable>
-                    Images
-                    <input type={"text"} name={"images"} onChange = {e => setImages(e.target.value)} defaultValue={post.images}/>
-                </lable>
-
-                <button type={"submit"}>Add</button>
-            </form>
+            <div>
+                <div>
+                    <h1>Add Post</h1>
+                    <form onSubmit={handleSubmit}>
+                        <lable>
+                            Title
+                            <input type={"text"} name={"name"} onChange = {e => setTitle(e.target.value)} />
+                        </lable>
+                        <lable>
+                            Content
+                            <input type={"text"} name={"content"} onChange = {e => setContent(e.target.value)}/>
+                        </lable>
+                        <lable>
+                            Images
+                            <input type={"text"} name={"images"} onChange = {e => setImages(e.target.value)}/>
+                        </lable>
+                        <button type={"submit"}>Add</button>
+                    </form>
+                </div>
+                <div>
+                    <h1>Update Post</h1>
+                    <form onSubmit={handleUpdateBtn} >
+                        <lable>
+                            Title
+                            <input type={"text"} name={"name"} onChange = {e => setTitle(e.target.value)} defaultValue ={post.title} />
+                        </lable>
+                        <lable>
+                            Content
+                            <input type={"text"} name={"content"} onChange = {e => setContent(e.target.defaultValue)} defaultValue={post.content}/>
+                        </lable>
+                        <lable>
+                            Images
+                            <input type={"text"} name={"images"} onChange = {e => setImages(e.target.value)} defaultValue={post.images}/>
+                        </lable>
+                        <button type={"submit"}>Add</button>
+                    </form>
+                </div>
+            </div>
 
             <h3>List Post</h3>
             <ul>
