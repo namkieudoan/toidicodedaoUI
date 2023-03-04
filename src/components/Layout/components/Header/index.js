@@ -23,6 +23,16 @@ function Header() {
         <div className={cx("inner")}>
             <div className={cx("title")}> <Link to="/"> Từ coder đến developer - Tôi đi code dạo </Link> </div>
             
+            {/* search */}
+            <div className={cx("search")} onClick={handleClickSearch}><SearchIcon/></div>
+            <div className={cx("search-container", `${isActiveSearch ? 'active-search': null}`)} >
+                <form method="" action="">
+                    <label htmlFor="search">
+                        <input type={"search"} id="search"  name={"search"} placeholder={"Search..."}/>
+                    </label>
+                </form>
+            </div>
+            
             {/* navbar */}
             <div className={cx("navigation" , `${isActiveMenu ? 'active-menu': null}`)}>
                 <ul className={cx("nav-list")}>
@@ -68,15 +78,6 @@ function Header() {
                 </ul>
             </div>
             
-            {/* search */}
-            <div className={cx("search")} onClick={handleClickSearch}><SearchIcon/></div>
-            <div className={cx("search-container", `${isActiveSearch ? 'active-search': null}`)} >
-                <form method="" action="">
-                    <label htmlFor="search">
-                        <input type={"search"} id="search"  name={"search"} placeholder={"Search..."}/>
-                    </label>
-                </form>
-            </div>
 
             {/* Menu bar */}
             <div className={cx("menubar")} onClick={handleClickMenu}>
