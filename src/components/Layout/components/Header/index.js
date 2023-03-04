@@ -21,14 +21,14 @@ function Header() {
     
     return <header className={cx('wrapper')}>
         <div className={cx("inner")}>
-            <div className={cx("title")}> <Link to="/"> Yêu Ngon 🐶! </Link> </div>
+            <div className={cx("title")}> <Link to="/"> Từ coder đến developer - Tôi đi code dạo </Link> </div>
             
             {/* navbar */}
             <div className={cx("navigation" , `${isActiveMenu ? 'active-menu': null}`)}>
                 <ul className={cx("nav-list")}>
-                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/">TRANG CHỦ</Link> </li>
+                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/">HOME</Link> </li>
 
-                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/blog">BLOG</Link> </li>
+                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/blog">BÀI VIẾT HAY</Link> </li>
 
                     <li className={cx("nav-item")}>
                         <Link className={cx("nav-link")} to="#">
@@ -41,8 +41,29 @@ function Header() {
                             </ul>
                         </Link> 
                     </li>
+                    <li className={cx("nav-item")}>
+                        <Link className={cx("nav-link")} to="#">
+                            CHUYỆN NGHỀ NGHIỆP 
+                            <span><DropIcon/></span>
+                            <ul className={cx("dropdown-menu")}>
+                                <li className={cx("dropdown-item")}><Link className={cx("dropdown-link")} to="#" >LẬP TRÌNH KHÔNG CODE </Link> </li>
+                                <li className={cx("dropdown-item")}><Link className={cx("dropdown-link")} to="#" >REACT JS CƠ BẢN</Link> </li>
+                                <li className={cx("dropdown-item")}><Link className={cx("dropdown-link")} to="#" >SERIES JAVASCRIPT SIDA </Link> </li>
+                            </ul>
+                        </Link> 
+                    </li>
+                    <li className={cx("nav-item")}>
+                        <Link className={cx("nav-link")} to="#">
+                            CHUYỆN LINH TINH 
+                            <span><DropIcon/></span>
+                            <ul className={cx("dropdown-menu")}>
+                                <li className={cx("dropdown-item")}><Link className={cx("dropdown-link")} to="#" >LẬP TRÌNH KHÔNG CODE </Link> </li>
+                                <li className={cx("dropdown-item")}><Link className={cx("dropdown-link")} to="#" >REACT JS CƠ BẢN</Link> </li>
+                                <li className={cx("dropdown-item")}><Link className={cx("dropdown-link")} to="#" >SERIES JAVASCRIPT SIDA </Link> </li>
+                            </ul>
+                        </Link> 
+                    </li>
                     
-                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="#">BÀI VIẾT HAY</Link> </li>
                     <li className={cx("nav-item")}><Link className={cx("nav-link")} to="#">ABOUT ME</Link> </li>
                 </ul>
             </div>
