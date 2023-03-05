@@ -1,8 +1,5 @@
 .wrapper {
-    width: 100%;
     height: var(--default-layout-header-height);
-    display: flex;
-    justify-content: left;
     color: #fff;
 }
 
@@ -117,20 +114,21 @@
     width: calc(100% - var(--default-layout-secondary-width));
     top: var(--default-layout-header-height);
     right:0px;
-    height: 46px;
+    height: 50px;
     background-color: var(--primary-color);
     position: absolute;
+    z-index: 100;
     
     input {
         width: 48%;
         height: 30px;
         float: right;
-        line-height: 46px;
         margin-right: 6px;
-        margin-top: 8px;
+        margin-top: 10px;
         font-size: 1.6rem;
         border: 2px solid #ccc;
         padding: 2px;
+        border-style: solid;
     }
     input &:focus {
         outline: none;
