@@ -7,7 +7,6 @@ import { publicRoutes,priveRoutes } from "./routes";
  
 
 function App() {
-  document.title = "Từ coder đến developer - Tôi đi code dạo";
   return (
     <Router>
       <div className="App">

@@ -38,10 +38,10 @@ function Header() {
                 <ul className={cx("nav-list")}>
                     <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/">HOME</Link> </li>
 
-                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="/blog">BÀI VIẾT HAY</Link> </li>
+                    <li className={cx("nav-item")}><Link title={"Những series/bài viết hay nhất trên blog"} className={cx("nav-link")} to="/blog">BÀI VIẾT HAY</Link> </li>
 
                     <li className={cx("nav-item")}>
-                        <Link className={cx("nav-link")} to="#">
+                        <Link title={"Những kiến thức technical hay ho"} className={cx("nav-link")} to="#">
                             CHUYỆN CODING 
                             <span><DropIcon/></span>
                             <ul className={cx("dropdown-menu")}>
@@ -52,7 +52,7 @@ function Header() {
                         </Link> 
                     </li>
                     <li className={cx("nav-item")}>
-                        <Link className={cx("nav-link")} to="#">
+                        <Link title={"Những kinh nghiệm làm việc, kĩ năng mềm mà ai cũng nên biết"} className={cx("nav-link")} to="#">
                             CHUYỆN NGHỀ NGHIỆP 
                             <span><DropIcon/></span>
                             <ul className={cx("dropdown-menu")}>
@@ -63,7 +63,7 @@ function Header() {
                         </Link> 
                     </li>
                     <li className={cx("nav-item")}>
-                        <Link className={cx("nav-link")} to="#">
+                        <Link title={"Một số chuyện linh tinh, cái nhìn về ngành nghề"} className={cx("nav-link")} to="#">
                             CHUYỆN LINH TINH 
                             <span><DropIcon/></span>
                             <ul className={cx("dropdown-menu")}>
@@ -74,7 +74,7 @@ function Header() {
                         </Link> 
                     </li>
                     
-                    <li className={cx("nav-item")}><Link className={cx("nav-link")} to="#">ABOUT ME</Link> </li>
+                    <li title={"Thông tin về tác giả"} className={cx("nav-item")}><Link className={cx("nav-link")} to="#">ABOUT ME</Link> </li>
                 </ul>
             </div>
             

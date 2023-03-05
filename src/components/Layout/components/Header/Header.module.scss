@@ -30,7 +30,8 @@
     
     a {
         color: #fff;
-        padding: 8px 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 .search {
@@ -63,6 +64,7 @@
         }
     }
 }
+
 .nav-link {
     font-size: 1.1rem;
     font-weight: 500;
@@ -225,7 +227,10 @@
     }
 
     .menubar {
-        display: inline-block;
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: #000;
     }
 
 }
