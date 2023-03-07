@@ -18,7 +18,7 @@ function Blog() {
     useEffect(()=> {
         setLoading(true); 
     async function getAllPost(){
-        const res = await axios.get("http://localhost:8000/v1/post");
+        const res = await axios.get(`${process.env.REACT_APP_API_ENDPOINT}/v1/post`);
         return res;
     };
         getAllPost()

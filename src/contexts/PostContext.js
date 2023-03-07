@@ -13,7 +13,7 @@ function PostProvider({children}) {
     //Get a post
     useEffect(()=>{
         async function getPost(){
-            const res = await axios.get(`http://localhost:8000/v1/post/${postId}`);
+            const res = await axios.get(`${process.env.REACT_APP_API_ENDPOINT}/v1/post/${postId}`);
             return res;
         };
             getPost()

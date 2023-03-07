@@ -6,7 +6,7 @@ function HomeAdmin() {
 
     useEffect(()=>{
         const fetchPosts = async () => {
-        let res = await axios.get("http://localhost:8000/v1/post");
+        let res = await axios.get("https://api-blog-xonf.onrender.com/v1/post");
         setPostList(res.data)
         };
         fetchPosts();
@@ -23,7 +23,7 @@ function HomeAdmin() {
     
 
     const PostApi = async (title, content,images) => {
-        let res = await axios.post("http://localhost:8000/v1/post", {
+        let res = await axios.post(`${process.env.REACT_APP_API_ENDPOINT}/v1/post`, {
             title: title,
             content : content,
             images : images
@@ -35,12 +35,12 @@ function HomeAdmin() {
     //update
     const [post,setPost] = useState({})
     const getpostById = async (id) => {
-        let res = await axios.get(`http://localhost:8000/v1/post/${id}`);
+        let res = await axios.get(`${process.env.REACT_APP_API_ENDPOINT}/v1/post/${id}`);
         setPost(res.data);
         console.log(post); 
     }
     const handleUpdateBtn = async ()=> {
-        let res = await axios.put(`http://localhost:8000/v1/post/${post._id}`,{
+        let res = await axios.put(`${process.env.REACT_APP_API_ENDPOINT}/v1/post/${post._id}`,{
             title: title || post.title ,
             content:content || post.content,
             images:images || post.images 
@@ -52,7 +52,7 @@ function HomeAdmin() {
     //confilm
 
     const deleteApi = async (id)=> {
-        await axios.delete(`http://localhost:8000/v1/post/${id}`);
+        await axios.delete(`${process.env.REACT_APP_API_ENDPOINT}/v1/post/${id}`);
         setPostList(postList.filter(post=> post._id !== id));
         console.log("deleted");
     }

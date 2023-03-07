@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 function Home() {
     return(
         <div className={cx("wrapper")} >
-            <h1>🐶 Yêu Ngon 🐶! </h1>
+            <h1>🐶 Tôi Đi Code Dạo 🐶! </h1>
             <br/>
             <div className={cx("start")}><Link to={"/blog"}>LET'S GET STARTED 🚀</Link></div>
             <span>Clone by @TOIDICODEDAO.COM 💚</span>
