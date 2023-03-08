@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 function HomeAdmin() {
     const [postList, setPostList] = useState([]);
@@ -69,9 +71,10 @@ function HomeAdmin() {
                             <input type={"text"} name={"name"} onChange = {e => setTitle(e.target.value)} />
                         </lable>
                         <lable>
-                            Content
-                            <input type={"text"} name={"content"} onChange = {e => setContent(e.target.value)}/>
+                            <h3>Content</h3>
+                            <ReactQuill theme="snow" value={content} onChange = {setContent} />
                         </lable>
+                        {console.log(content)}
                         <lable>
                             Images
                             <input type={"text"} name={"images"} onChange = {e => setImages(e.target.value)}/>

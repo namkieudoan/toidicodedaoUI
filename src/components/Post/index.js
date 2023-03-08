@@ -2,6 +2,8 @@ import classNames from "classnames/bind";
 import { useContext } from "react";
 import { useNavigate} from "react-router-dom";
 import { PostContext } from "../../contexts/PostContext";
+import { convert } from 'html-to-text';
+
 
 import styles from "./Post.module.scss";
 
@@ -10,7 +12,6 @@ const cx = classNames.bind(styles);
 function Post() {
     const navigate = useNavigate();
     const {post} = useContext(PostContext);
-    console.log(post)
 
     return<div className={cx("post")}>
         <button className={cx("back-btn")} onClick={()=>navigate("/blog")}> Back </button>
@@ -28,11 +29,7 @@ function Post() {
                             </span>
                         </div>
                         <div className={cx("post-content")}>
-                            {post.content }
-                            {post.content }
-                            {post.content }
-                            {post.content }
-                            {post.content }
+                            {convert(post.content)}
 
                         </div>
                         <div className={cx("post-direct")}>

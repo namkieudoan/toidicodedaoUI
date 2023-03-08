@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
+import { convert } from 'html-to-text';
 
 import styles from "./Blog.module.scss";
 import { PostContext } from "../../contexts/PostContext";
@@ -43,7 +44,9 @@ function Blog() {
 
             {loading && <div className={cx("loading")}><LoadingIcon/></div>}
 
-            {postList.map((post,id)=>{ 
+            {postList.map((post,id)=>{
+                let content = post.content;
+                let contentRes = convert(content);
             return( 
                 <article className={cx("post")} key={id} >
                     <Link  className={cx("post-image")} to={post._id} >
@@ -59,8 +62,7 @@ function Blog() {
                             </span>
                         </div>
                         <div className={cx("post-content")}>
-                            <p>{post.content}</p>
-                                
+                            <p>{contentRes}</p>
                         </div>
                         <div className={cx("post-direct")}>
                             <Link  className={cx("post-direct-link")} to={post._id} onClick={()=> handlePost(post._id)}>- Continute Reading -</Link>
